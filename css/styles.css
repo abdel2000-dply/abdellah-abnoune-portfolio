@@ -1,0 +1,124 @@
+/* main style */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #f8f8f8;
+  background-color: #03031c;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #03031c;
+  color: #f8f8f8;
+  padding: 1rem 3rem;
+  position: fixed;
+  width: -webkit-fill-available;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-cv {
+  display: flex;
+  align-items: center;
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 1rem;
+	border: 3px solid #D4BFEC;
+	padding: 0.5rem 1.5rem;
+	border-radius: 20px;
+	transition: color 0.3s ease;
+}
+
+.download-cv svg {
+  margin-right: 0.5rem;
+}
+
+.download-cv:hover {
+	color: #f4a261; /* Accent color for hover effect */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu a {
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover, .menu a.active {
+  color: #f4a261;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #03031c;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    z-index: 1001;
+  }
+}
+
