@@ -98,6 +98,15 @@ nav {
   transform: rotate(-45deg) translateY(-7px);
 }
 
+/* section style */
+section {
+  min-height: 100vh;
+  padding: 10rem 12% 10rem;
+}
+
+/* hero section style */
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .menu {
