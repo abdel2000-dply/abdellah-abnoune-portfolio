@@ -173,6 +173,9 @@ section {
 .hero-content span {
   opacity: 1;
 }
+.hero-content .typing {
+  color: #e07a5f;
+}
 
 .my-image {
   width: 35vw;
