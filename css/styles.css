@@ -13,7 +13,7 @@ body {
 nav {
   background-color: #03031c;
   color: #f8f8f8;
-  padding: 1rem 3rem;
+  padding: 1rem 5%;
   position: fixed;
   width: -webkit-fill-available;
   top: 0;
@@ -105,7 +105,24 @@ section {
 }
 
 /* hero section style */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-content {
+  width: 50%;
 
+}
+
+.my-image {
+  width: 42vw;
+}
+
+.my-image img {
+  width: 100%;
+  border-radius: 50%;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
