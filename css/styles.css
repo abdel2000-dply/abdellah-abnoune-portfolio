@@ -35,7 +35,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  animation: up-to-bottom 1s ease forwards;
+  animation: top-to-bottom 1s ease forwards;
 }
 
 .download-cv {
@@ -147,6 +147,7 @@ section {
   text-shadow: #D4BFEC 0px 0px 10px;
 }
 .hero-content p {
+  color: #BBBBBB;
   font-size: 1rem;
   margin: 1.5rem 0rem;
   animation: left-to-right 1s ease forwards .85s;
@@ -200,7 +201,7 @@ section {
 }
 
 /* keyframs */
-@keyframes up-to-bottom {
+@keyframes top-to-bottom {
   0% {
     opacity: 0;
     transform: translateY(-50%);
@@ -240,7 +241,19 @@ section {
   flex-direction: column;
   align-items: center;
 }
-
+#about-me h2 {
+  font-size: 2rem;
+  opacity: 0;
+  animation: top-to-bottom 1s ease forwards 0.9s;
+}
+#about-me p {
+  color: #BBBBBB;
+  font-size: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  animation: top-to-bottom 1s ease forwards 1s;
+  padding: 0 10%;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .menu {
