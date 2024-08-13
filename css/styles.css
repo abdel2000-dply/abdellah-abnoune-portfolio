@@ -3,9 +3,13 @@
 
 /* main style */
 body {
+  /* body's backround */
+  background-color: #03031c;
+  /* background-image: url('/assets/images/clouds.png'); */
+  /* background-repeat: no-repeat; */
+
   font-family: 'Montserrat', sans-serif;
   color: #f8f8f8;
-  background-color: #03031c;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,6 +20,42 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.left-cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  z-index: -1;
+  opacity: 0;
+}
+
+.right-cloud {
+  position: absolute;
+  top: 77px;
+  right: 0;
+  width: 200px;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+@keyframes clear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.right-cloud, .left-cloud {
+  filter: brightness(0.7) opacity(0.8);
+  animation: clear 2s ease forwards;
+}
+
 h2 {
   font-size: 2rem;
   font-family: 'Josefin Sans', 'Montserrat', sans-serif;
@@ -23,7 +63,7 @@ h2 {
 
 /* Navbar Styles */
 nav {
-  background-color: #03031c;
+  background-color: #03031c98;
   color: #f8f8f8;
   padding: 1rem 5%;
   position: fixed;
