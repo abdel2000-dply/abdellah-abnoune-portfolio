@@ -309,13 +309,16 @@ section {
 }
 #projects h2 {
   font-size: 2rem;
+  margin: 2rem auto;
   opacity: 0;
   /* addjust this to activate when scroll not refresh ... */
   animation: top-to-bottom 1s ease forwards 0.9s; 
   grid-column: span 2;
 }
+
 .project {
   background-color: #03031c;
+  max-width: 80%;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -323,6 +326,9 @@ section {
 }
 .project:hover {
   box-shadow: 0 6px 20px rgba(235, 235, 235, 0.3);
+  .project-image img {
+    transform: scale(0.9);
+  }
 }
 .project .project-image {
   position: relative;
@@ -332,8 +338,24 @@ section {
 .project img {
   width: 100%;
   border-radius: 10px;
+  transition: transform 0.4s ease;
 }
-
+.project .project-content {
+  padding: 1rem 0;
+}
+.project h3 {
+  font-size: 1.5rem;
+}
+.project p {
+  color: #BBBBBB;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.project .cta {
+  padding: 0.4rem 1.7rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
