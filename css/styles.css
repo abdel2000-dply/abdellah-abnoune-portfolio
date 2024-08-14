@@ -298,6 +298,43 @@ section {
   animation: top-to-bottom 1s ease forwards 1s;
   padding: 0 10%;
 }
+
+/* Project section styling */
+#projects {
+  /* grid 2 at a line */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem 12%;
+}
+#projects h2 {
+  font-size: 2rem;
+  opacity: 0;
+  /* addjust this to activate when scroll not refresh ... */
+  animation: top-to-bottom 1s ease forwards 0.9s; 
+  grid-column: span 2;
+}
+.project {
+  background-color: #03031c;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+.project:hover {
+  box-shadow: 0 6px 20px rgba(235, 235, 235, 0.3);
+}
+.project .project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.project img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .menu {
