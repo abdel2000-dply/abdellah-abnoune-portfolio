@@ -7,19 +7,18 @@ body {
   background-color: #03031c;
   /* background-image: url('/assets/images/clouds.png'); */
   /* background-repeat: no-repeat; */
-
   font-family: 'Montserrat', sans-serif;
   color: #f8f8f8;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  line-height: 1.6;
 }
 /* scroll bar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 * {
+  box-sizing: border-box;
+  line-height: 1.6;
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -71,7 +70,7 @@ nav {
   color: #f8f8f8;
   padding: 1rem 5%;
   position: fixed;
-  width: -webkit-fill-available;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -323,6 +322,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
+  place-self: center;
 }
 .project:hover {
   box-shadow: 0 6px 20px rgba(235, 235, 235, 0.3);
@@ -352,10 +352,22 @@ section {
   margin: 0.5rem 0;
 }
 .project .cta {
+  margin-top: 1rem;
   padding: 0.4rem 1.7rem;
   font-size: 0.9rem;
   font-weight: normal;
+  place-self: center;
 }
+
+/* skills section style */
+#skills h2 {
+  font-size: 2rem;
+  margin: 2rem auto;
+  opacity: 0;
+  text-align: center;
+  animation: top-to-bottom 1s ease forwards 0.9s;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
