@@ -7,4 +7,12 @@ var typed = new Typed('.typing', {
     loop: true
 });
 
-        
+// for the table toggle
+document.querySelectorAll('#skills tr').forEach(row => {
+    row.addEventListener('click', function() {
+        document.querySelectorAll('#skills td.content').forEach(td => {
+            td.classList.remove('active');
+        });
+        this.querySelector('td.content').classList.add('active');
+    });
+});
