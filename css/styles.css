@@ -404,7 +404,46 @@ section {
 }
 
 /* Contact section style */
+#contact h2 {
+  font-size: 2rem;
+  margin: 2rem auto;
+  opacity: 0;
+  text-align: center;
+  animation: top-to-bottom 1s ease forwards 0.9s;
+  span {
+    color: #f4a261;
+  }
+}
 
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 12%;
+}
+
+.contact-inputs {
+  width: 50%;
+  height: 2rem;
+  border: none;
+  color: #f4a261;
+  background-color: #bbbbbb50;
+}
+
+.contact-body textarea {
+  width: 50%;
+  height: 10rem;
+  border: none;
+  color: #f4a261;
+  background-color: #BBBBBB50;
+}
+
+.contact-inputs:focus {
+  outline: #e07a5f;
+  border-bottom: 2px solid #e07a5f;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
