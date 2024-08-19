@@ -197,6 +197,22 @@ section {
   animation: left-to-right 1s ease forwards .85s;
 }
 
+.sociel-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.sociel-icons a {
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  animation: left-to-right 1s ease forwards 1s;
+}
+.sociel-icons a i {
+  animation: left-to-right 1s ease forwards 1s;
+}
+
+
 .cta {
   display: inline-block;
   padding: 0.75rem 2rem;
@@ -220,7 +236,7 @@ section {
 .hero-content *{
   opacity: 0;
 }
-.hero-content span {
+.hero-content span, .sociel-icons {
   opacity: 1;
 }
 .hero-content .typing {
