@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdellah Abnoune</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   </head>
   <body>
     <!------------------------------------------------------------- Navbar -->
@@ -42,6 +43,10 @@
         <p>I specialize in building innovative solutions that connect software with hardware, and I create robust, scalable web applications.</p>
         <div class="sociel-icons">
           <!-- add sociel icons -->
+           <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+           <a href=""><i class="fa-brands fa-github"></i></a>
+           <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+           <a href=""></a>
         </div>
         <a href="#contact" class="cta">Contact me</a>
       </div>
@@ -145,15 +150,25 @@
     <section id="contact">
       <h2>Contact <span>Me</span></h2>
       <div class="contact-container">
-        <form action=""  class="contact-body">
+        <form action="https://api.web3forms.com/submit" method="POST"  class="contact-body">
+          <input type="hidden" name="access_key" value="a1be126e-ba62-473b-aea0-370139e5e64a">
           <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
           <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
-          <textarea name="name" placeholder="Message Here" class="contact-inputs" required></textarea>
+          <textarea name="message" placeholder="Message Here" class="contact-inputs" required></textarea>
           <button type="submit" class="contact-button">Submit <span>&rarr;</span></button>
         </form>
       </div>
       
     </section>
+    <footer>
+      <p>&copy; 2021 Abdellah Abnoune. All rights reserved.</p>
+      <div class="sociel-icons">
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""></a>
+      </div>
+    </footer>
 
     <!-- floating images -->
      <img src="assets/images/clouds.png" alt="clouds" class="left-cloud">
