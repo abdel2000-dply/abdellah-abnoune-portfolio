@@ -420,7 +420,6 @@ section {
   flex-direction: column;
   gap: 3rem;
   align-items: center;
-  justify-content: center;
   padding: 2rem 12%;
 }
 
@@ -429,12 +428,15 @@ section {
   height: 2rem;
   border: none;
   color: #f4a261;
+  padding-left: 10px;
   background-color: #bbbbbb50;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-body textarea {
   width: 50%;
   height: 10rem;
+  padding-top: 10px;
   border: none;
   color: #f4a261;
   background-color: #BBBBBB50;
@@ -443,6 +445,37 @@ section {
 .contact-inputs:focus {
   outline: #e07a5f;
   border-bottom: 2px solid #e07a5f;
+}
+
+.contact-inputs::placeholder {
+  color: #f4a261;
+}
+
+.contact-button {
+  background-color: #e07a5f;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 20px;
+}
+
+.contact-button span {
+  transition: transform 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #f4a261;
+}
+
+.contact-button:hover span {
+  transform: translateX(5px);
 }
 
 /* Responsive Design */
@@ -466,6 +499,11 @@ section {
   .hamburger-menu {
     display: flex;
     z-index: 1001;
+  }
+
+  #projects {
+    grid-template-columns: 1fr;
+    
   }
 }
 
