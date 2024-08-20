@@ -523,7 +523,15 @@ section {
 }
 
 /* Footer style */
-
+footer {
+  background-color: #00000050;
+  color: #f8f8f8;
+  padding: 1rem 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
 
 
 
