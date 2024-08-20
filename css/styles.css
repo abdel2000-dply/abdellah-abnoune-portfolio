@@ -532,7 +532,9 @@ footer {
   justify-content: space-between;
   font-size: 0.9rem;
 }
-
+footer .sociel-icons{
+  margin: 0;
+}
 
 
 /* Responsive Design */
