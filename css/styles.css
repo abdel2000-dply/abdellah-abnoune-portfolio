@@ -535,7 +535,10 @@ footer {
 footer .sociel-icons{
   margin: 0;
 }
-
+footer p:last-child {
+  font-size: 0.8rem;
+  color: #bbbbbb;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
