@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
 
 /* main style */
+html {
+  scroll-behavior: smooth;
+}
 body {
   /* body's backround */
   background-color: #03031c;
@@ -193,23 +196,38 @@ section {
 .hero-content p {
   color: #BBBBBB;
   font-size: 1rem;
-  margin: 1.5rem 0rem;
+  margin: 1rem 0rem;
   animation: left-to-right 1s ease forwards .85s;
 }
 
 .sociel-icons {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
 .sociel-icons a {
-  color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F6F1D5; /* Moon color */
   font-size: 1.5rem;
-  transition: color 0.3s ease;
-  animation: left-to-right 1s ease forwards 1s;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 2px solid none;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  animation: fade-in 1s ease forwards 1s;
+}
+.sociel-icons a:hover {
+  color: #f4a261; /* Accent color */
+  box-shadow: 0 0 10px #F6F1D5; /* Accent color */
+  transform: scale(1.1) rotate(360deg);
 }
 .sociel-icons a i {
-  animation: left-to-right 1s ease forwards 1s;
+  animation: inherit;
 }
 
 
@@ -291,6 +309,15 @@ section {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -443,6 +470,7 @@ section {
   width: 50%;
   height: 2rem;
   border: none;
+  border-radius: 5px;
   color: #f4a261;
   padding-left: 10px;
   background-color: #bbbbbb50;
@@ -493,6 +521,11 @@ section {
 .contact-button:hover span {
   transform: translateX(5px);
 }
+
+/* Footer style */
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
