@@ -220,7 +220,7 @@ section {
   border: 2px solid none;
   border-radius: 50%;
   transition: 0.3s ease-in-out;
-  animation: fade-in 1s ease forwards 1s;
+  animation: fade-in 1s ease forwards 1.5s;
 }
 .sociel-icons a:hover {
   color: #f4a261; /* Accent color */
@@ -536,6 +536,9 @@ footer {
 }
 footer .sociel-icons{
   margin: 0;
+}
+footer .sociel-icons a {
+  opacity: 0;
 }
 footer p:last-child {
   font-size: 0.8rem;
