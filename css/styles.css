@@ -332,15 +332,24 @@ section {
 #about-me h2 {
   font-size: 2rem;
   opacity: 0;
-  animation: top-to-bottom 1s ease forwards 0.9s;
+  animation: top-to-bottom both;
+  animation-timeline: view(70% 20%);
 }
 #about-me p {
   color: #BBBBBB;
   font-size: 1.2rem;
   text-align: center;
   opacity: 0;
-  animation: top-to-bottom 1s ease forwards 1s;
+  animation: top-to-bottom both;
+  animation-timeline: view(70% 20%);
   padding: 0 10%;
+}
+
+.working {
+  border-radius: 50%;
+  width: 300px;
+  animation: top-to-bottom both;
+  animation-timeline: view(70% 20%);
 }
 
 /* Project section styling */
@@ -355,9 +364,9 @@ section {
   font-size: 2rem;
   margin: 2rem auto;
   opacity: 0;
-  /* addjust this to activate when scroll not refresh ... */
-  animation: top-to-bottom 1s ease forwards 0.9s; 
+  animation: top-to-bottom both; 
   grid-column: span 2;
+  animation-timeline: view(70% 20%);
 }
 
 .project {
@@ -403,6 +412,16 @@ section {
   font-size: 0.9rem;
   font-weight: normal;
   place-self: center;
+}
+
+.autoShowFromLeft {
+  animation: right-to-left both;
+  animation-timeline: view(70% 20%);
+}
+
+.autoShowFromRight {
+  animation: left-to-right both;
+  animation-timeline: view(70% 20%);
 }
 
 /* skills section style */
