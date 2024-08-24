@@ -35,7 +35,7 @@ body {
   width: 500px;
   z-index: -1;
   /* opacity: 0; */
-  animation: moving 3s linear infinite;
+  /* animation: moving 3s linear infinite; */
 }
 
 .left-cloud-2 {
@@ -44,7 +44,7 @@ body {
   left: 0;
   width: 500px;
   z-index: -1;
-  animation: moving 3s linear infinite 1.5s;
+  /* animation: moving 3s linear infinite 1.5s; */
 }
 
 .right-cloud {
@@ -494,6 +494,17 @@ section {
 #skills table td.content.active {
   opacity: 1;
   max-height: 100px; /* Adjust this value as needed */
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
 }
 
 /* Contact section style */
