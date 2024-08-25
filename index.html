@@ -35,7 +35,7 @@
     <section id="hero">
       <div class="hero-content">
         <h3>Hey, It's me</h3>
-        <h1>Abnoune <span class="myname">Abdellah</span></h1>
+        <h1>Abnoune <span class="myname ripple-element">Abdellah</span></h1>
         <h1 class="text-animation">
           I'm a
           <span class="typing"></span>
@@ -48,9 +48,9 @@
            <a href="https://x.com/Abdel2272" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
            <a href="https://techwispers.medium.com/" target="_blank"><i class="fa-brands fa-medium"></i></a>
         </div>
-        <a href="#contact" class="cta">Contact me</a>
+        <a href="#contact" class="cta ripple-element">Contact me</a>
       </div>
-      <div class="my-image">
+      <div class="my-image ripple-element">
         <img src="/assets/images/image.jpg" alt="Abdellah Abnoune" />
       </div>
     </section>
@@ -69,7 +69,7 @@
     <!------------------------------------------------------------- Projects Section -->
     <section id="projects">
       <h2>Projects</h2>
-      <div class="project  autoShowFromLeft">
+      <div class="project  autoShowFromLeft ripple-element">
         <div class="project-image">
           <img src="assets/images/IoT-Device-Control.png" alt="IoT Device Control and Data Management API by Abdellah Abnoune" />
         </div>
@@ -82,7 +82,7 @@
           <a href="https://github.com/abdel2000-dply/iot-control-system" class="cta" target="_blank">View project</a>
         </div>
       </div>
-      <div class="project  autoShowFromRight">
+      <div class="project  autoShowFromRight ripple-element">
         <div class="project-image">
           <img src="/assets/images/BookUnluck.png" alt="BookUnluck Project by Abdellah Abnoune" />
         </div>
@@ -96,7 +96,7 @@
           <a href="https://github.com/abdel2000-dply/BookUnlock" class="cta" target="_blank">View project</a>
         </div>
       </div>
-      <div class="project  autoShowFromLeft">
+      <div class="project  autoShowFromLeft ripple-element">
         <div class="project-image">
           <img src="assets/images/file-manager.png" alt="File Manager" />
         </div>
@@ -109,7 +109,7 @@
           <a href="https://github.com/abdel2000-dply/alx-files_manager/" class="cta" target="_blank">View project</a>
         </div>
       </div>
-      <div class="project  autoShowFromRight">
+      <div class="project  autoShowFromRight ripple-element">
         <div class="project-image">
           <img src="assets/images/Flask-URL-Shortener.png" alt="Flask URL Shortener" />
         </div>
@@ -156,14 +156,14 @@
 
     <!------------------------------------------------------------- Contact Section -->
     <section id="contact">
-      <h2>Contact <span>Me</span></h2>
+      <h2>Contact <span class="ripple-element">Me</span></h2>
       <div class="contact-container">
         <form action="https://api.web3forms.com/submit" method="POST"  class="contact-body">
           <input type="hidden" name="access_key" value="a1be126e-ba62-473b-aea0-370139e5e64a">
           <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
           <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
           <textarea name="message" placeholder="Message Here" class="contact-inputs" required></textarea>
-          <button type="submit" class="contact-button">Submit <span>&rarr;</span></button>
+          <button type="submit" class="contact-button ripple-element">Submit <span>&rarr;</span></button>
         </form>
       </div>
       
@@ -177,17 +177,20 @@
       </div>
       <div>
         <p>&copy; 2024 Abdellah Abnoune. All rights reserved.</p>
-        <p>Designed & Built by Abnoune Abdellah</p>
+        <p class="ripple-element">Designed & Built by Abnoune Abdellah</p>
       </div>
     </footer>
 
+    <!-- water ripples -->
+    <canvas id="ripple-canvas"></canvas>
     <!-- floating images -->
-     <img src="assets/images/clouds.png" alt="clouds" class="left-cloud">
+     <!-- <img src="assets/images/clouds.png" alt="clouds" class="left-cloud">
      <img src="assets/images/clouds.png" alt="clouds" class="left-cloud-2">
-     <img src="assets/images/clouds.png" alt="clouds" class="right-cloud">
+     <img src="assets/images/clouds.png" alt="clouds" class="right-cloud"> -->
     <!-- Scripts -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
     <script src="js/navbar.js" defer></script>
+    <script src="js/waterRipple.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>
