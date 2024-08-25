@@ -127,31 +127,17 @@
     <!------------------------------------------------------------- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
-      <table>
-        <tr id="languages">
-          <td>Programming Languages</td>
-          <td class="content active">
-            <span class="icons">
-              <img src="assets/icons/python-5.svg" alt="python">
-              <img src="assets/icons/logo-javascript.svg" alt="python">
-              <img src="assets/icons/typescript.svg" alt="python">
-              <img src="assets/icons/c-1.svg" alt="python">
-            </span>
-          </td>
-        </tr>
-        <tr id="frameworks">
-          <td>Frameworks & Libraries</td>
-          <td class="content">React, Flask, express ...</td>
-        </tr>
-        <tr id="tools">
-          <td>Tools & Technologies</td>
-          <td class="content">Git, Mongodb, Docker</td>
-        </tr>
-        <tr id="softskills">
-          <td>Soft Skills</td>
-          <td class="content">Teamwork, Communication, problem-solving</td>
-        </tr>
-      </table>
+      <div class="skills-container">
+        <div class="skills-list">
+          <div id="languages" class="skill-row">Programming Languages</div>
+          <div id="frameworks" class="skill-row">Frameworks & Libraries</div>
+          <div id="tools" class="skill-row">Tools & Technologies</div>
+          <div id="softskills" class="skill-row">Soft Skills</div>
+        </div>
+        <div id="skill-content" class="skill-content">
+          <!-- This will be dynamically updated -->
+        </div>
+      </div>
     </section>
 
     <!------------------------------------------------------------- Contact Section -->
