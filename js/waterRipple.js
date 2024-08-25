@@ -29,8 +29,21 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+// function to generate ripples at the possition of each element
+function generateRipples() {
+  const elements = document.querySelectorAll('.ripple-element');
+  elements.forEach(element => {
+    const rect = element.getBoundingClientRect();
+    const x = rect.left + Math.random() * rect.width;
+    const y = rect.top + Math.random() * rect.height;
+    drawRipple(x, y);
+  });
+}
+
 document.addEventListener('mousemove', (event) => {
   drawRipple(event.clientX, event.clientY);
 });
+
+setInterval(generateRipples, 800);
 
 animate();
