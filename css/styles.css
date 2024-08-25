@@ -92,6 +92,16 @@ h2 {
   font-family: 'Josefin Sans', 'Montserrat', sans-serif;
   letter-spacing: 3px;
 }
+/* water ripple style */
+#ripple-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
 
 /* Navbar Styles */
 nav {
@@ -383,7 +393,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr;
   grid-auto-rows: 1fr;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 12%;
 }
 #projects h2 {
@@ -398,7 +408,7 @@ section {
 
 .project {
   background-color: #03031c;
-  max-width: 80%;
+  max-width: 60%;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
