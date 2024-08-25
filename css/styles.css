@@ -371,7 +371,7 @@ section {
 }
 #about-me p {
   color: #BBBBBB;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   opacity: 0;
   animation: top-to-bottom both;
