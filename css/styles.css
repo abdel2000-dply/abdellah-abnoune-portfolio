@@ -435,12 +435,12 @@ section {
   padding: 1rem 0;
 }
 .project h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #f9f5e2;
 }
 .project p {
   color: #BBBBBB;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0.5rem 0;
 }
 .project .cta {
@@ -450,7 +450,7 @@ section {
   font-weight: normal;
   place-self: center;
   animation: left-to-right both;
-  animation-timeline: view(70% 20%);
+  animation-timeline: view(70% 15%);
 }
 
 .autoShowFromLeft {
@@ -472,38 +472,27 @@ section {
   animation: top-to-bottom 1s ease forwards 0.9s;
 }
 
-#skills table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 3rem auto;
+.skills-container {
+  display: flex;
 }
 
-#skills table td {
-  padding: 1.5rem 0;
-  text-align: left;
-  font-size: 1rem;
+.skills-list {
+  flex: 1;
+  border-right: 1px solid #bbb;
 }
-#skills tr td:first-child {
-  font-weight: bold;
+
+.skill-row {
+  padding: 10px;
   cursor: pointer;
-  transition: color 1s ease;
-  border-right: 3px solid #f8f8f8;
-  width: 30%;
-}
-#skills tr td:first-child:hover {
-  color: #f4a261;
 }
 
-#skills table td.content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
-  padding: 2rem;
+.skill-row:hover {
+  background-color: #ffffff4b;
 }
-#skills table td.content.active {
-  opacity: 1;
-  max-height: 100px; /* Adjust this value as needed */
+
+.skill-content {
+  flex: 2;
+  padding: 10px;
 }
 
 .icons {
