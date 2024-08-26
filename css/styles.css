@@ -484,6 +484,7 @@ section {
 .skill-row {
   padding: 10px;
   cursor: pointer;
+  /* border-bottom: 1px solid #bbb; */
 }
 
 .skill-row:hover {
