@@ -19,45 +19,52 @@ var typed = new Typed('.typing', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const skillContent = document.getElementById('skill-content');
-  const skillData = {
-    languages: `
-      <span class="icons">
-        <img src="assets/icons/python-5.svg" alt="python" class="ripple-element">
-        <img src="assets/icons/logo-javascript.svg" alt="javascript">
-        <img src="assets/icons/typescript.svg" alt="typescript">
-        <img src="assets/icons/c-1.svg" alt="c">
-        <img src="assets/icons/bash-2.svg" alt="bash">
-        <img src="assets/icons/html-1.svg" alt="html">
-        <img src="assets/icons/css-3.svg" alt="css">
-        <img src="assets/icons/arduino.svg" alt="arduino">
-      </span>
-    `,
-    frameworks: `
-      <span class="icons">
-        <img src="assets/icons/react-2.svg" alt="react">
-        <img src="assets/icons/expressjs.png" alt="express">
-        <img src="assets/icons/flask.svg" alt="flask">
-        <img src="assets/icons/jquery-1.svg" alt="jquery">
-        </span>`,
-    tools: `
+        const skillData = {
+      languages: `
         <span class="icons">
-        <img src="assets/icons/nodejs-2.svg" alt="nodejs">
-        <img src="assets/icons/mongodb-icon-2.svg" alt="mongodb">
-        <img src="assets/icons/sqlite.svg" alt="sqlite">
-        <img src="assets/icons/git-icon.svg" alt="git">
-        <img src="assets/icons/github-icon.svg" alt="github">
-        <img src="assets/icons/visual-studio-code-1.svg" alt="vscode">
-        <img src="assets/icons/postman-icon.svg" alt="postman">
-      </span>`,
-    softskills: `
-      <span class="icons">
-        <img src="assets/icons/communication.svg" alt="communication">
-        <img src="assets/icons/teamwork.svg" alt="teamwork">
-        <img src="assets/icons/leadership.svg" alt="leadership">
-        <img src="assets/icons/problem-solving.svg" alt="problem-solving">
-      </span>
-    `
-  };
+          <img src="assets/icons/python-5.svg" alt="python" title="Python" class="ripple-element">
+          <img src="assets/icons/logo-javascript.svg" alt="javascript" title="JavaScript" class="ripple-element">
+          <img src="assets/icons/typescript.svg" alt="typescript" title="TypeScript" class="ripple-element">
+          <img src="assets/icons/c-1.svg" alt="c" title="C" class="ripple-element">
+          <img src="assets/icons/bash-2.svg" alt="bash" title="Bash" class="ripple-element">
+          <img src="assets/icons/html-1.svg" alt="html" title="HTML" class="ripple-element">
+          <img src="assets/icons/css-3.svg" alt="css" title="CSS" class="ripple-element">
+          <img src="assets/icons/arduino.svg" alt="arduino" title="Arduino" class="ripple-element">
+          <img src="assets/icons/matlab.svg" alt="matlab" title="MATLAB" class="ripple-element">
+          <img src="assets/icons/mysql.svg" alt="mysql" title="MySQL" class="ripple-element">
+        </span>
+      `,
+      frameworks: `
+        <span class="icons">
+          <img src="assets/icons/react-2.svg" alt="react" title="React" class="ripple-element">
+          <img src="assets/icons/expressjs.png" alt="express" title="Express" class="ripple-element">
+          <img src="assets/icons/flask.svg" alt="flask" title="Flask" class="ripple-element">
+          <img src="assets/icons/jquery-1.svg" alt="jquery" title="jQuery" class="ripple-element">
+        </span>
+      `,
+      tools: `
+        <span class="icons">
+          <img src="assets/icons/nodejs-2.svg" alt="nodejs" title="Node.js" class="ripple-element">
+          <img src="assets/icons/mongodb-icon-2.svg" alt="mongodb" title="MongoDB" class="ripple-element">
+          <img src="assets/icons/sqlite.svg" alt="sqlite" title="SQLite" class="ripple-element">
+          <img src="assets/icons/git-icon.svg" alt="git" title="Git" class="ripple-element">
+          <img src="assets/icons/github-icon.svg" alt="github" title="GitHub" class="ripple-element">
+          <img src="assets/icons/visual-studio-code-1.svg" alt="vscode" title="VS Code" class="ripple-element">
+          <img src="assets/icons/postman.svg" alt="postman" title="Postman" class="ripple-element">
+          <img src="assets/icons/redis.svg" alt="redis" title="Redis" class="ripple-element">
+          <img src="assets/icons/swagger.svg" alt="swagger" title="Swagger" class="ripple-element">
+        </span>
+      `,
+      softskills: `
+        <span class="icons">
+          <img src="assets/icons/continuous-learning.png" alt="curiosity" title="Curiosity and Continuous Learning" class="ripple-element">
+          <img src="assets/icons/analytical_thinking.svg" alt="analytical-thinking" title="Analytical Thinking" class="ripple-element">
+          <img src="assets/icons/problem-solving.svg" alt="problem-solving" title="Problem-Solving" class="ripple-element">
+          <img src="assets/icons/message.png" alt="communication" title="Communication" class="ripple-element">
+          <img src="assets/icons/team.svg" alt="team-collaboration" title="Team Collaboration" class="ripple-element">
+        </span>
+      `
+    };
 
   skillContent.innerHTML = skillData.languages; // default content
 
