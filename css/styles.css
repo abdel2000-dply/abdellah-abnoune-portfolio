@@ -487,11 +487,13 @@ section {
   border-right: 2px solid #bbb;
   animation: top-to-bottom both;
   animation-timeline: view(70% 20%);
+  display: grid;
+  gap: 2rem;
 }
 
 .skill-row {
   padding: 10px;
-  margin: 30px 0;
+  /* margin: 30px 0; */
   cursor: pointer;
 }
 .skill-row:first-child {
@@ -521,9 +523,9 @@ section {
 }
 
 .icons {
-  display: flex;
+  display: grid;
   gap: 2rem;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-around;
   align-items: center;
   opacity: 0;
@@ -534,15 +536,32 @@ section {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   padding: 12px;
   transition: transform 0.3s;
   box-shadow: inset 0px 0px 5px 5px #434343cc;
+  animation: floating 3s ease-in-out forwards infinite;
 }
 
+.icons img:first-child {
+  animation-delay: 0.5s;
+}
 
 .icons img:hover {
+  animation: none;
   transform: scale(1.2);
+}
+
+@keyframes floating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1) translate(0, 5px);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
