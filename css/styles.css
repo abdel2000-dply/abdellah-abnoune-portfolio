@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
 
+/* colors
+primary: #007580 deep teal | for buttons
+secondary: #B0DFE5 baby blue (sky blue #4f91e3 ) | for headings ...
+accent: #F4A261 light orange
+
+*/
 /* main style */
 html {
   scroll-behavior: smooth;
@@ -12,7 +18,8 @@ body {
   /* background-image: url('/assets/images/clouds.png'); */
   /* background-repeat: no-repeat; */
   font-family: 'Montserrat', sans-serif;
-  color: #f8f8f8;
+  /* color: #f8f8f8; */
+  color: #e0e6ed;
   margin: 0;
   padding: 0;
 }
@@ -28,68 +35,13 @@ body {
   margin: 0;
 }
 
-.left-cloud {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  z-index: -1;
-  /* opacity: 0; */
-  /* animation: moving 3s linear infinite; */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f5fa; /* Moonlight blue for headings */
+  font-family: 'Josefin Sans', 'Montserrat', sans-serif;
 }
-
-.left-cloud-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 500px;
-  z-index: -1;
-  /* animation: moving 3s linear infinite 1.5s; */
-}
-
-.right-cloud {
-  position: absolute;
-  top: 77px;
-  right: 0;
-  width: 200px;
-  z-index: -1;
-  transform: scaleX(-1);
-  /* animation: moving 10s linear infinite; */
-}
-
-@keyframes moving {
-  0% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  40% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5) translate3d(-100px, 20%, 0);
-  }
-}
-
-/* @keyframes clear {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: .4;
-  }
-  100% {
-    opacity: 1; 
-  }
-}
-
-.right-cloud, .left-cloud {
-  filter: brightness(0.7) opacity(0.8);
-  animation: clear 2s ease forwards;
-} */
 
 h2 {
   font-size: 2rem;
-  font-family: 'Josefin Sans', 'Montserrat', sans-serif;
   letter-spacing: 3px;
 }
 /* water ripple style */
@@ -106,8 +58,8 @@ h2 {
 /* Navbar Styles */
 nav {
   background-color: #03031c98;
-  color: #f8f8f8;
-  padding: 1rem 5%;
+  color: #e0e6ed;
+  padding: 1rem 10%;
   position: fixed;
   width: 100%;
   top: 0;
@@ -123,21 +75,30 @@ nav {
 .download-cv {
   display: flex;
   align-items: center;
-  color: #f8f8f8;
+  color: #dddddd;
+  background-color: #00758066;
   text-decoration: none;
   font-size: 1rem;
-	border: 3px solid #D4BFEC;
+	border: 3px solid #007580;
 	padding: 0.5rem 1.5rem;
 	border-radius: 20px;
-	transition: color 0.3s ease;
+	transition: color 0.2s ease, transform 0.5s ease;
 }
 
 .download-cv svg {
   margin-right: 0.5rem;
 }
+.download-cv svg path {
+  fill: #007580;
+  transition: fill 0.4s ease;
+}
 
 .download-cv:hover {
-	color: #f4a261; /* Accent color for hover effect */
+  color: #e0e6ed;
+  transform: translateY(-5px);
+  svg path {
+    fill: #ffffff;
+  }
 }
 
 .menu ul {
@@ -150,14 +111,14 @@ nav {
 
 
 .menu a {
-  color: #f8f8f8;
+  color: #e0e6ed;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .menu a:hover, .menu a.active {
-  color: #f4a261;
+  color: #4f91e3;
 }
 
 .hamburger-menu {
@@ -171,7 +132,7 @@ nav {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #f8f8f8;
+  background-color: #e0e6ed;
   border-radius: 3px;
   transition: background-color 0.3s ease;
 }
@@ -225,11 +186,11 @@ section {
 
 }
 .hero-content .myname {
-  color: #f4a261;
-  text-shadow: #D4BFEC 0px 0px 10px;
+  color: #4f91e3;
+  text-shadow: #4f91e3 0px 0px 10px;
 }
 .hero-content p {
-  color: #BBBBBB;
+  color: #e0e6ed;
   font-size: 1rem;
   margin: 1rem 0rem;
   animation: left-to-right 1s ease forwards .85s;
@@ -257,7 +218,7 @@ section {
   animation: fade-in 1s ease-in-out forwards 1.2s;
 }
 .sociel-icons a:hover {
-  color: #f4a261; /* Accent color */
+  color: #4f91e3; /* Accent color */
   box-shadow: 0 0 10px #F6F1D5; /* Accent color */
   transform: scale(1.1) rotate(360deg);
 }
@@ -269,8 +230,8 @@ section {
 .cta {
   display: inline-block;
   padding: 0.75rem 2rem;
-  color: #f8f8f8;
-  background-color: #f4a261; /* Accent color */
+  color: #e0e6ed;
+  background-color: #4f91e3; /* Accent color */
   text-decoration: none;
   border-radius: 30px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -370,7 +331,7 @@ section {
   animation-timeline: view(70% 20%);
 }
 #about-me p {
-  color: #BBBBBB;
+  color: #e0e6ed;
   font-size: 1rem;
   text-align: center;
   opacity: 0;
@@ -436,10 +397,10 @@ section {
 }
 .project h3 {
   font-size: 1.4rem;
-  color: #f9f5e2;
+  color: #e0e6ed;
 }
 .project p {
-  color: #BBBBBB;
+  color: #e0e6ed;
   font-size: 0.9rem;
   margin: 0.5rem 0;
 }
@@ -535,11 +496,11 @@ section {
 .icons img {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.3);
   padding: 12px;
   transition: transform 0.3s;
-  box-shadow: inset 0px 0px 5px 5px #434343cc;
+  box-shadow: inset 0px 0px 5px 5px #f0f5fa33;
   animation: floating 3s ease-in-out forwards infinite;
 }
 
@@ -573,7 +534,7 @@ section {
   text-align: center;
   animation: top-to-bottom 1s ease forwards 0.9s;
   span {
-    color: #f4a261;
+    color: #4f91e3;
   }
 }
 
@@ -590,9 +551,9 @@ section {
   height: 2rem;
   border: none;
   border-radius: 5px;
-  color: #f4a261;
+  color: #4f91e3;
   padding-left: 10px;
-  background-color: #bbbbbb50;
+  background-color: #e0e6ed50;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -601,8 +562,8 @@ section {
   height: 10rem;
   padding-top: 10px;
   border: none;
-  color: #f4a261;
-  background-color: #BBBBBB50;
+  color: #4f91e3;
+  background-color: #e0e6ed50;
 }
 
 .contact-inputs:focus {
@@ -611,11 +572,11 @@ section {
 }
 
 .contact-inputs::placeholder {
-  color: #f4a261;
+  color: #4f91e3;
 }
 
 .contact-button {
-  background-color: #e07a5f;
+  background-color: #4f91e3;
   color: white;
   border: none;
   padding: 0.7rem 1.5rem;
@@ -634,7 +595,7 @@ section {
 }
 
 .contact-button:hover {
-  background-color: #f4a261;
+  background-color: #4f91e3;
 }
 
 .contact-button:hover span {
@@ -659,7 +620,7 @@ footer .sociel-icons a {
 }
 footer p:last-child {
   font-size: 0.8rem;
-  color: #bbbbbb;
+  color: #e0e6ed;
 }
 
 /* Responsive Design */
