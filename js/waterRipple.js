@@ -4,12 +4,17 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let ripples = [];
+let animationFrameId;
+let intervalId;
+let isAnimating = false;
 
 function drawRipple(x, y) {
   ripples.push({ x: x, y: y, radius: 0, opacity: 1 });
 }
 
 function animate() {
+  if (!isAnimating) return;
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ripples.forEach((ripple, index) => {
@@ -26,10 +31,10 @@ function animate() {
     }
   });
 
-  requestAnimationFrame(animate);
+  animationFrameId = requestAnimationFrame(animate);
 }
 
-// function to generate ripples at the possition of each element
+// Function to generate ripples at the position of each element
 function generateRipples() {
   const elements = document.querySelectorAll('.ripple-element');
   elements.forEach(element => {
@@ -44,6 +49,31 @@ document.addEventListener('mousemove', (event) => {
   drawRipple(event.clientX, event.clientY);
 });
 
-setInterval(generateRipples, 800);
+document.addEventListener('click', (event) => {
+  drawRipple(event.clientX, event.clientY);
+});
 
-animate();
+function startAnimation() {
+  if (!isAnimating) {
+    isAnimating = true;
+    intervalId = setInterval(generateRipples, 1800);
+    animate();
+  }
+}
+
+function stopAnimation() {
+  isAnimating = false;
+  clearInterval(intervalId);
+  cancelAnimationFrame(animationFrameId);
+  ripples = [];
+}
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopAnimation();
+  } else {
+    startAnimation();
+  }
+});
+
+startAnimation();
