@@ -109,7 +109,6 @@ nav {
   padding: 0;
 }
 
-
 .menu a {
   color: #e0e6ed;
   text-decoration: none;
@@ -118,7 +117,7 @@ nav {
 }
 
 .menu a:hover, .menu a.active {
-  color: #4f91e3;
+  color: #B0DFE5;
 }
 
 .hamburger-menu {
@@ -186,8 +185,8 @@ section {
 
 }
 .hero-content .myname {
-  color: #4f91e3;
-  text-shadow: #4f91e3 0px 0px 10px;
+  color: #B0DFE5;
+  text-shadow: #B0DFE5 0px 0px 5px;
 }
 .hero-content p {
   color: #e0e6ed;
@@ -218,8 +217,8 @@ section {
   animation: fade-in 1s ease-in-out forwards 1.2s;
 }
 .sociel-icons a:hover {
-  color: #4f91e3; /* Accent color */
-  box-shadow: 0 0 10px #F6F1D5; /* Accent color */
+  color: #B0DFE5;
+  box-shadow: 0 0 10px #F6F1D5;
   transform: scale(1.1) rotate(360deg);
 }
 .sociel-icons a i {
@@ -231,19 +230,21 @@ section {
   display: inline-block;
   padding: 0.75rem 2rem;
   color: #e0e6ed;
-  background-color: #4f91e3; /* Accent color */
+  background-color: #007580;
   text-decoration: none;
+  border: 1px solid #007580;
   border-radius: 30px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-size: 1rem;
   font-weight: bold;
-  box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4);
+  box-shadow: 0 4px 15px #b0dfe5c7;
   animation: left-to-right 1s ease forwards 1s;
 }
 
 .cta:hover {
-  background-color: #e07a5f; /* Slightly darker accent color */
-  transform: translateY(-5px); /* Slight lift on hover */
+  background-color: #B0DFE5;
+
+  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(224, 122, 95, 0.5);
 }
 
