@@ -639,7 +639,6 @@ footer p:last-child {
 }
 
 /* Responsive Design */
-/* 769px before*/
 @media (max-width: 890px) {
   .menu {
     display: none;
