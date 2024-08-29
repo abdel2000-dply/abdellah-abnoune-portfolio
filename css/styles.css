@@ -110,6 +110,21 @@ nav {
   padding: 0;
 }
 
+.menu ul li:last-child {
+  position: relative;
+}
+
+.menu ul li:last-child::after {
+  content: '';
+  display: block;
+  width: 40%;
+  height: 2px;
+  background-color: #B0DFE5;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
 .menu a {
   color: #e0e6ed;
   text-decoration: none;
