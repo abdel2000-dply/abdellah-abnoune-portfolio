@@ -36,11 +36,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #f0f5fa; /* Moonlight blue for headings */
+  color: #f0f5fa;
   font-family: 'Josefin Sans', 'Montserrat', sans-serif;
 }
 
 h2 {
+  color: #B0DFE5;
   font-size: 2rem;
   letter-spacing: 3px;
 }
@@ -89,7 +90,7 @@ nav {
   margin-right: 0.5rem;
 }
 .download-cv svg path {
-  fill: #007580;
+  fill: #B0DFE5;
   transition: fill 0.4s ease;
 }
 
@@ -199,7 +200,7 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .sociel-icons a {
@@ -234,18 +235,16 @@ section {
   text-decoration: none;
   border: 1px solid #007580;
   border-radius: 30px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
   font-size: 1rem;
   font-weight: bold;
   box-shadow: 0 4px 15px #b0dfe5c7;
-  animation: left-to-right 1s ease forwards 1s;
+  animation: fade-in 1s ease-in-out forwards 1s;
+  outline: none;
 }
 
 .cta:hover {
-  background-color: #B0DFE5;
-
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(224, 122, 95, 0.5);
 }
 
 .hero-content *{
@@ -255,7 +254,7 @@ section {
   opacity: 1;
 }
 .hero-content .typing {
-  color: #e07a5f;
+  color: #9DC6CC;
 }
 
 .my-image {
@@ -268,11 +267,11 @@ section {
 .my-image img {
   width: 100%;
   border-radius: 50%;
-  box-shadow: 16px 0px 30px 5px rgba(244, 162, 97, 0.8);
+  box-shadow: 16px 0px 30px 5px #007580;
   transition: box-shadow .7s ease;
 }
 .my-image img:hover {
-  box-shadow: 16px 0px 30px 10px #e07a5f;
+  box-shadow: 16px 0px 30px 10px #007580;
 }
 
 /* keyframs */
@@ -397,8 +396,8 @@ section {
   padding: 1rem 0;
 }
 .project h3 {
+  color: #B0DFE5;
   font-size: 1.4rem;
-  color: #e0e6ed;
 }
 .project p {
   color: #e0e6ed;
@@ -535,7 +534,7 @@ section {
   text-align: center;
   animation: top-to-bottom 1s ease forwards 0.9s;
   span {
-    color: #4f91e3;
+    color: #007580;
   }
 }
 
@@ -552,7 +551,7 @@ section {
   height: 2rem;
   border: none;
   border-radius: 5px;
-  color: #4f91e3;
+  color: #B0DFE5;
   padding-left: 10px;
   background-color: #e0e6ed50;
   font-family: 'Montserrat', sans-serif;
@@ -563,24 +562,24 @@ section {
   height: 10rem;
   padding-top: 10px;
   border: none;
-  color: #4f91e3;
+  color: #B0DFE5;
   background-color: #e0e6ed50;
 }
 
 .contact-inputs:focus {
-  outline: #e07a5f;
+  outline: #007580;
   border-bottom: 2px solid #e07a5f;
 }
 
 .contact-inputs::placeholder {
-  color: #4f91e3;
+  color: #B0DFE5;
 }
 
 .contact-button {
   background-color: #4f91e3;
   color: white;
   border: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1.7rem;
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
