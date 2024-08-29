@@ -249,6 +249,7 @@ section {
 .cta {
   display: inline-block;
   padding: 0.75rem 2rem;
+  margin: 1rem 0;
   color: #e0e6ed;
   background-color: #007580;
   text-decoration: none;
@@ -598,7 +599,7 @@ section {
 }
 
 .contact-button {
-  background-color: #4f91e3;
+  background-color: #007580;
   color: white;
   border: none;
   padding: 0.7rem 1.7rem;
@@ -617,7 +618,8 @@ section {
 }
 
 .contact-button:hover {
-  background-color: #4f91e3;
+  background-color: #007580;
+  color: #b0dfe5;
 }
 
 .contact-button:hover span {
