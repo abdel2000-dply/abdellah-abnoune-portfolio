@@ -639,7 +639,8 @@ footer p:last-child {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* 769px before*/
+@media (max-width: 890px) {
   .menu {
     display: none;
     position: absolute;
@@ -661,9 +662,15 @@ footer p:last-child {
     z-index: 1001;
   }
 
+  .my-image {
+    display: none;
+  }
+  .hero-content {
+    width: 100%;
+  }
+
   #projects {
     grid-template-columns: 1fr;
-
   }
 }
 
