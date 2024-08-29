@@ -20,7 +20,7 @@ function animate() {
   ripples.forEach((ripple, index) => {
     ctx.beginPath();
     ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2, false);
-    ctx.strokeStyle = `rgba(44, 44, 71, ${ripple.opacity})`;
+    ctx.strokeStyle = `rgba(44, 68, 84, ${ripple.opacity})`; // 44, 44, 71 used before
     ctx.stroke();
 
     ripple.radius += 2;
