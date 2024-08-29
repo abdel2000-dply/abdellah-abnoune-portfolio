@@ -56,7 +56,7 @@ document.addEventListener('click', (event) => {
 function startAnimation() {
   if (!isAnimating) {
     isAnimating = true;
-    intervalId = setInterval(generateRipples, 1800);
+    intervalId = setInterval(generateRipples, 1500);
     animate();
   }
 }
