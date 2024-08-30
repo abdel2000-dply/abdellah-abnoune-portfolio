@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       row.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        // block: 'center',
         inline: 'center'
       });
     });
