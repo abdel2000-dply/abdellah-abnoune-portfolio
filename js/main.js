@@ -72,6 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
     row.addEventListener('click', () => {
       const id = row.id;
       skillContent.innerHTML = skillData[id];
+
+      row.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'center'
+      });
     });
   });
 });
