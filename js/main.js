@@ -68,16 +68,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillContent.innerHTML = skillData.languages; // default content
 
-  document.querySelectorAll('.skill-row').forEach((row) => {
+  const skillRows = document.querySelectorAll('.skill-row');
+
+  skillRows.forEach((row) => {
     row.addEventListener('click', () => {
       const id = row.id;
       skillContent.innerHTML = skillData[id];
 
-      row.scrollIntoView({
-        behavior: 'smooth',
-        // block: 'center',
-        inline: 'center'
-      });
+      if (window.innerWidth <= 890) {
+        row.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center'
+        });
+      }
     });
+  });
+
+  // IntersectionObserver to detect when an item is in the center
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.click();
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Adjust this value as needed
+  });
+
+  skillRows.forEach(row => {
+    observer.observe(row);
   });
 });
