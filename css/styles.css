@@ -739,4 +739,27 @@ footer p:last-child {
 
 
   /* contact section */
+  .contact-body {
+    padding: 0;
+  }
+
+  .contact-inputs {
+    width: 100%;
+  }
+
+  .contact-body textarea {
+    width: 100%;
+  }
+
+  /* footer */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  footer p {
+    font-size: 13px;
+    text-align: center;
+  }
+
 }
