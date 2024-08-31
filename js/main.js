@@ -19,8 +19,8 @@ var typed = new Typed('.typing', {
 
 document.addEventListener('DOMContentLoaded', () => {
   const skillContent = document.getElementById('skill-content');
-        const skillData = {
-      languages: `
+  const skillData = {
+    languages: `
         <span class="icons">
           <img src="assets/icons/python-5.svg" alt="python" title="Python" class="ripple-element">
           <img src="assets/icons/logo-javascript.svg" alt="javascript" title="JavaScript">
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="assets/icons/mysql.svg" alt="mysql" title="MySQL">
         </span>
       `,
-      frameworks: `
+    frameworks: `
         <span class="icons">
           <img src="assets/icons/react-2.svg" alt="react" title="React" class="ripple-element">
           <img src="assets/icons/expressjs.png" alt="express" title="Express">
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="assets/icons/jquery-1.svg" alt="jquery" title="jQuery" class="ripple-element">
         </span>
       `,
-      tools: `
+    tools: `
         <span class="icons">
           <img src="assets/icons/nodejs-2.svg" alt="nodejs" title="Node.js" class="ripple-element">
           <img src="assets/icons/mongodb-icon-2.svg" alt="mongodb" title="MongoDB">
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="assets/icons/swagger.svg" alt="swagger" title="Swagger" class="ripple-element">
         </span>
       `,
-      softskills: `
+    softskills: `
         <span class="icons">
           <img src="assets/icons/continuous-learning.png" alt="curiosity" title="Curiosity and Continuous Learning" class="ripple-element">
           <img src="assets/icons/analytical_thinking.svg" alt="analytical-thinking" title="Analytical Thinking">
@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <img src="assets/icons/team.svg" alt="team-collaboration" title="Team Collaboration" class="ripple-element">
         </span>
       `
-    };
+  };
 
-  skillContent.innerHTML = skillData.languages; // default content
+  skillContent.innerHTML = skillData.languages;
 
   const skillRows = document.querySelectorAll('.skill-row');
 
@@ -84,21 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // IntersectionObserver to detect when an item is in the center
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.click();
-        entry.target.classList.add('active');
+  if (window.innerWidth <= 768) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.click();
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
       }
-    });
-  }, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5 // Adjust this value as needed
-  });
-
-  skillRows.forEach(row => {
-    observer.observe(row);
-  });
+    );
+  }
 });
