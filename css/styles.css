@@ -192,7 +192,10 @@ section {
 }
 .hero-content {
   width: 50%;
-  text-align: left;
+  /* text-align: left; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .hero-content h3 {
   font-size: 1.7rem;
@@ -380,6 +383,7 @@ section {
   grid-auto-rows: 1fr;
   gap: 1rem;
   padding: 2rem 12%;
+  /* overflow-x: hidden; */
 }
 #projects h2 {
   font-size: 2rem;
@@ -450,7 +454,8 @@ section {
 
 /* skills section style */
 #skills,
-#about-me {
+#about-me,
+#contact {
   min-height: 80vh;
 }
 
@@ -592,7 +597,7 @@ section {
 
 .contact-inputs:focus {
   outline: #007580;
-  border-bottom: 2px solid #e07a5f;
+  border-bottom: 2px solid #007580;
 }
 
 .contact-inputs::placeholder {
@@ -651,6 +656,10 @@ footer p:last-child {
 /* Responsive Design */
 @media (max-width: 890px) {
   /* navbar */
+  nav {
+    padding: 1rem 5%;
+    height: 70px;
+  }
   .menu {
     display: none;
     position: absolute;
@@ -672,19 +681,60 @@ footer p:last-child {
     z-index: 1001;
   }
 
+  .download-cv {
+    padding: 0.5rem 1rem;
+  }
+
 /* hero section */
+  /* #hero {
+    flex-direction: column-reverse;
+    gap: .8rem;
+  } */
   .my-image {
+    /* margin-top: 2.5rem;
+    width: 40vw; */
     display: none;
   }
+
   .hero-content {
     width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+  }
+  /* about me section */
+  .working {
+    width: 200px;
+  }
+
+  #about-me p {
+    padding: 0;
+    text-align: left;
   }
 
   /* projects section */
 
   #projects {
-    display: none;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+  }
+
+  .project {
+    max-width: 100%;
   }
 
   /* skills section */
