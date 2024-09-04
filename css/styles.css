@@ -13,12 +13,8 @@ html {
 }
 
 body {
-  /* body's backround */
   background-color: #03031c;
-  /* background-image: url('/assets/images/clouds.png'); */
-  /* background-repeat: no-repeat; */
   font-family: 'Montserrat', sans-serif;
-  /* color: #f8f8f8; */
   color: #e0e6ed;
   margin: 0;
   padding: 0;
