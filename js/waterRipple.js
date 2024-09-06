@@ -50,19 +50,6 @@ document.addEventListener('mousemove', (event) => {
   drawRipple(event.clientX, event.clientY);
 });
 
-// -------------- Mouse ripple effect with delay
-// let timeoutId;
-// const rippleDelay = 20;
-
-// document.addEventListener('mousemove', (event) => {
-//   clearTimeout(timeoutId);
-
-//   timeoutId = setTimeout(() => {
-//     drawRipple(event.clientX, event.clientY);
-//   }, rippleDelay);
-// });
-// --------------------------------------------
-
 document.addEventListener('click', (event) => {
   drawRipple(event.clientX, event.clientY);
 });
